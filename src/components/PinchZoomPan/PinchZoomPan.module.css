@@ -2,18 +2,27 @@
   position: relative;
   transform: translateZ(0);
   overflow: hidden;
+  touch-action: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
 }
 
 .point {
   position: absolute;
   width: 0;
   height: 0;
-  transform: translate(0, 0) scale(1);
+  transform: translate3d(0, 0, 0) scale(1);
   transform-origin: center;
   will-change: transform;
 }
 
 .canvas {
   position: absolute;
-  transform: translate(-50%, -50%);
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+  transform-origin: center;
+  /* Remove image-rendering properties since we're dealing with text */
+  text-rendering: geometricPrecision;
+  white-space: nowrap; /* Prevent text wrapping during zoom */
 }

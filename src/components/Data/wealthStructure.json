@@ -1,0 +1,704 @@
+[
+  {
+    "id": "John Smith",
+    "gender": "male",
+    "nodeType": "person",
+    "netWorth": 8750000,
+    "dateOfBirth": "1998-01-01",
+    "relationshipStatus": "Married",
+    "advisorAUM": 750000,
+    "parents": [],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Family Trust",
+        "type": "blood"
+      },
+      {
+        "id": "Personal Holdings",
+        "type": "blood"
+      },
+      {
+        "id": "Fuze Applications Limited",
+        "type": "blood"
+      }
+    ]
+  },
+  {
+    "id": "Family Trust",
+    "gender": "neutral",
+    "nodeType": "company",
+    "parents": [
+      {
+        "id": "John Smith",
+        "type": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "Personal Holdings",
+        "type": "blood"
+      },
+      {
+        "id": "Fuze Applications Limited",
+        "type": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Fidelity ISA",
+        "type": "blood"
+      }
+    ]
+  },
+  {
+    "id": "Personal Holdings",
+    "gender": "neutral",
+    "nodeType": "company",
+    "parents": [
+      {
+        "id": "John Smith",
+        "type": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "Family Trust",
+        "type": "blood"
+      },
+      {
+        "id": "Fuze Applications Limited",
+        "type": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Hargreaves ISA",
+        "type": "blood"
+      }
+    ]
+  },
+  {
+    "id": "Fuze Applications Limited",
+    "gender": "neutral",
+    "nodeType": "company",
+    "parents": [
+      {
+        "id": "John Smith",
+        "type": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "Family Trust",
+        "type": "blood"
+      },
+      {
+        "id": "Personal Holdings",
+        "type": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Fuze Ventures Ltd",
+        "type": "blood"
+      },
+      {
+        "id": "D&B Ltd",
+        "type": "blood"
+      }
+    ]
+  },
+  {
+    "id": "Fuze Ventures Ltd", 
+    "gender": "neutral",
+    "nodeType": "company",
+    "parents": [
+      {
+        "id": "Fuze Applications Limited",  
+        "type": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "D&B Ltd",
+        "type": "blood"
+      }
+    ],  
+    "spouses": [],
+    "children": [
+      {
+        "id": "Fuze Ventures Account 1",
+        "type": "blood"
+      }
+    ]  
+  },
+  {
+    "id": "D&B Ltd", 
+    "gender": "neutral",
+    "nodeType": "company",
+    "parents": [
+      {
+        "id": "Fuze Applications Limited",  
+        "type": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "Fuze Ventures Ltd",
+        "type": "blood"
+      }
+    ],  
+    "spouses": [],
+    "children": [
+      {
+        "id": "D&B Account 1",
+        "type": "blood"
+      }
+    ]  
+  },
+  {
+    "id": "Fidelity ISA",
+    "gender": "neutral",
+    "nodeType": "account",
+    "balance": 650000,
+    "accountNumber": "****3456",
+    "providerName": "Fidelity",
+    "providerCategoryId": 2,
+    "accountType": "ISA",
+    "parents": [
+      {
+        "id": "Family Trust",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "London Property",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "cash": 25000,
+      "holdings": [
+        {
+          "description": "S&P 500 Index Fund",
+          "holdingType": "ETF",
+          "value": 225000,
+          "quantity": 1500,
+          "price": 150,
+          "isin": "US78462F1030",
+          "symbol": "SPY",
+          "allocation": 35
+        },
+        {
+          "description": "FTSE All-World ETF",
+          "holdingType": "ETF",
+          "value": 195000,
+          "quantity": 2600,
+          "price": 75,
+          "isin": "IE00B3RBWM25",
+          "symbol": "VWRL",
+          "allocation": 30
+        }
+      ]
+    }
+  },
+  {
+    "id": "London Property",
+    "gender": "neutral",
+    "nodeType": "account",
+    "balance": 1200000,
+    "providerCategoryId": 4,
+    "accountType": "Rental",
+    "parents": [
+      {
+        "id": "Fidelity ISA",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "HSBC Premier",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "type": "Rental",
+      "fullAddress": "123 London Road, London, LD1 2FE",
+      "purchasePrice": 1000000,
+      "homeValue": 1200000,
+      "mortgage": 600000,
+      "equity": 600000,
+      "rentalIncome": 4000,
+      "ltv": 33.33,
+      "occupancyRate": 15,
+      "estimatedDate": "2023-12-01",
+      "annualExpenses": 54000,
+      "annualRentalIncome": 120000, 
+      "mortgageDetails": {
+        "principalBalance": 600000,
+        "originalLoanAmount": 1000000,
+        "value": 1800000,
+        "purchasePrice": 1500000
+      }
+    }
+  },
+  {
+    "id": "HSBC Premier",
+    "gender": "neutral",
+    "nodeType": "account",
+    "balance": 100000,
+    "accountNumber": "****5678",
+    "providerName": "HSBC",
+    "providerCategoryId": 1,
+    "accountType": "Current Account",
+    "parents": [
+      {
+        "id": "London Property",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Private Equity Fund",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "cash": 100000,
+      "interestRate": 0.5,
+      "overdraftLimit": 10000
+    }
+  },
+  {
+    "id": "Private Equity Fund",
+    "gender": "neutral",
+    "nodeType": "account",
+    "balance": 500000,
+    "accountNumber": "****6789",
+    "accountType": "Private Equity",
+    "providerName": "KKR",
+    "providerCategoryId": 12,
+    "parents": [
+      {
+        "id": "HSBC Premier",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Hargreaves ISA",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "displayedName": "Tech Growth Fund",
+      "businessName": "Seedrs EIS Fund",
+      "SEISInvestmentAmount": 25000,
+      "EISInvestmentAmount": 75000,
+      "businessSector": "Technology",
+      "investmentDate": "2023-06-01"
+    }
+  },
+  {
+    "id": "Hargreaves ISA",
+    "gender": "neutral",
+    "nodeType": "account",
+    "balance": 850000,
+    "accountNumber": "****7890",
+    "providerName": "Hargreaves Lansdown",
+    "providerCategoryId": 2,
+    "accountType": "ISA",
+    "parents": [
+      {
+        "id": "Personal Holdings",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Vanguard SIPP",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "cash": 50000,
+      "holdings": [
+        {
+          "description": "Fundsmith Equity",
+          "holdingType": "Fund",
+          "value": 400000,
+          "quantity": 80000,
+          "price": 5.00,
+          "isin": "GB00B4Q5X527",
+          "symbol": "FUNEQ",
+          "allocation": 47
+        },
+        {
+          "description": "Lindsell Train Global Equity",
+          "holdingType": "Fund",
+          "value": 200000,
+          "quantity": 100000,
+          "price": 2.00,
+          "isin": "GB00BJRCY126",
+          "symbol": "LTGEF",
+          "allocation": 24
+        }
+      ]
+    }
+  },
+  {
+    "id": "Vanguard SIPP",
+    "gender": "neutral",
+    "nodeType": "account",
+    "balance": 450000,
+    "accountNumber": "****8901",
+    "providerName": "Vanguard",
+    "providerCategoryId": 2,
+    "accountType": "SIPP",
+    "parents": [
+      {
+        "id": "Hargreaves ISA",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Amex Platinum",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "cash": 20000,
+      "holdings": [
+        {
+          "description": "Vanguard FTSE Global All Cap",
+          "holdingType": "Fund",
+          "value": 430000,
+          "quantity": 150000,
+          "price": 2.87,
+          "isin": "GB00BD3RZ582",
+          "symbol": "VGAC",
+          "allocation": 100
+        }
+      ]
+    }
+  },
+  {
+    "id": "Amex Platinum",
+    "gender": "neutral",
+    "nodeType": "account",
+    "balance": 5000,
+    "accountNumber": "****9012",
+    "providerName": "American Express",
+    "providerCategoryId": 5,
+    "accountType": "Credit Card",
+    "parents": [
+      {
+        "id": "Vanguard SIPP",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Bitcoin Holdings",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "creditLimit": 20000,
+      "currentBalance": 5000,
+      "rewardsPoints": 50000,
+      "apr": 24.9
+    }
+  },
+  {
+    "id": "Bitcoin Holdings",
+    "nodeType": "account",
+    "balance": 250000,
+    "accountNumber": "****9012",
+    "providerName": "Coinbase",
+    "providerCategoryId": 7,
+    "accountType": "Crypto",
+    "parents": [
+      {
+        "id": "Amex Platinum",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Life Insurance",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "cash": 10000,
+      "holdings": [
+        {
+          "description": "Bitcoin",
+          "holdingType": "Cryptocurrency",
+          "value": 150000,
+          "quantity": 3.5,
+          "price": 42857,
+          "symbol": "BTC",
+          "allocation": 60
+        },
+        {
+          "description": "Ethereum",
+          "holdingType": "Cryptocurrency",
+          "value": 90000,
+          "quantity": 45,
+          "price": 2000,
+          "symbol": "ETH",
+          "allocation": 40
+        }
+      ]
+    }
+  },
+  {
+    "id": "Life Insurance",
+    "nodeType": "account",
+    "balance": 75000,
+    "accountNumber": "****4567",
+    "providerName": "Prudential",
+    "providerCategoryId": 3,
+    "accountType": "Life Insurance",
+    "parents": [
+      {
+        "id": "Bitcoin Holdings",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Home Mortgage",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "cashValue": 75000,
+      "faceAmount": 1000000,
+      "type": "Whole Life",
+      "premiumAmount": 750,
+      "premiumFrequency": "Monthly",
+      "startDate": "2020-01-01",
+      "maturityDate": "2070-01-01"
+    }
+  },
+  {
+    "id": "Home Mortgage",
+    "nodeType": "account",
+    "balance": 400000,
+    "accountNumber": "****7890",
+    "providerName": "HSBC",
+    "providerCategoryId": 6,
+    "accountType": "Mortgage",
+    "parents": [
+      {
+        "id": "Life Insurance",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Personal Loan",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "interestRate": 3.99,
+      "mortgageDetails": {
+        "principalBalance": 400000,
+        "originalLoanAmount": 500000,
+        "value": 800000,
+        "purchasePrice": 750000
+      }
+    }
+  },
+  {
+    "id": "Personal Loan",
+    "nodeType": "account",
+    "balance": 25000,
+    "accountNumber": "****3456",
+    "providerName": "Barclays",
+    "providerCategoryId": 6,
+    "accountType": "Loan",
+    "parents": [
+      {
+        "id": "Home Mortgage",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Fuze Applications Ltd",
+        "type": "blood"
+      }
+    ],
+    "details": {
+      "ownershipPercentage": 100,
+      "interestRate": 5.99,
+      "originalAmount": 30000,
+      "monthlyPayment": 575,
+      "startDate": "2023-01-01",
+      "endDate": "2025-01-01",
+      "purpose": "Home Improvement"
+    }
+  },
+  {
+    "id": "Fuze Applications Ltd",
+    "nodeType": "account",
+    "balance": 100000,
+    "accountNumber": "****8901",
+    "accountType": "Shares",
+    "providerCategoryId": 12,
+    "parents": [
+      {
+        "id": "Personal Loan",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [],
+    "details": {
+      "ownershipPercentage": 100,
+      "displayedName": "Fuze Applications Ltd",
+      "businessName": "Fuze Applications Ltd",
+      "SEISInvestmentAmount": 25000,
+      "EISInvestmentAmount": 75000,
+      "businessSector": "Technology",
+      "investmentDate": "2023-06-01",
+      "value": 500000,
+      "quantity": 100
+    }
+
+
+
+
+  },
+  {
+    "id": "Fuze Ventures Account 1",
+    "gender": "neutral",
+    "nodeType": "account",
+    "balance": 100000,
+    "accountNumber": "****1234",
+    "providerName": "Barclays",
+    "providerCategoryId": 1,
+    "accountType": "Business Account",
+    "parents": [
+      {
+        "id": "Fuze Ventures Ltd",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Fuze Ventures Account 2",
+        "type": "blood"
+      }
+    ]
+  },
+  {
+      "id": "Fuze Ventures Account 2",
+      "gender": "neutral",
+      "nodeType": "account",
+      "balance": 50000,
+      "accountNumber": "****5678",
+    "providerName": "Barclays",
+    "providerCategoryId": 1,
+    "accountType": "Savings Account",
+    "parents": [
+      {
+        "id": "Fuze Ventures Account 1",
+        "type": "blood"
+      }
+    ],
+    "siblings": [],
+    "spouses": [],
+    "children": []
+  },
+  {
+      "id": "D&B Account 1",
+      "gender": "neutral",
+      "nodeType": "account",
+      "balance": 75000,
+      "accountNumber": "****9012",
+      "providerName": "HSBC",
+      "providerCategoryId": 1,
+      "accountType": "Business Account",
+      "parents": [
+        {
+          "id": "D&B Ltd",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [],
+      "children": [
+        {
+          "id": "D&B Account 2",
+          "type": "blood"
+        }
+      ]
+  },
+  {
+      "id": "D&B Account 2",
+      "gender": "neutral",
+      "nodeType": "account",
+      "balance": 25000,
+      "accountNumber": "****3456",
+      "providerName": "HSBC",
+      "providerCategoryId": 1,
+      "accountType": "Savings Account",
+      "parents": [
+        {
+          "id": "D&B Account 1",
+          "type": "blood"
+        }
+      ],
+      "siblings": [],
+      "spouses": [],
+      "children": []
+  }
+]

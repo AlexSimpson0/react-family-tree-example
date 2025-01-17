@@ -1,0 +1,169 @@
+[
+  {
+    "id": "John Smith",
+    "gender": "male",
+    "nodeType": "person",
+    "netWorth": 2500000,
+    "dateOfBirth": "1960-03-15T00:00:00",
+    "relationshipStatus": "married",
+    "advisorAUM": {
+      "currency": "GBP",
+      "amount": 2800000
+    },
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "Sarah Smith",
+        "type": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "Michael Smith",
+        "type": "blood"
+      },
+      {
+        "id": "Emma Smith",
+        "type": "blood"
+      }
+    ]
+  },
+  {
+    "id": "Sarah Smith",
+    "gender": "female",
+    "nodeType": "person",
+    "netWorth": 1800000,
+    "dateOfBirth": "1962-08-21T00:00:00",
+    "relationshipStatus": "married",
+    "advisorAUM": {
+      "currency": "GBP",
+      "amount": 1900000
+    },
+    "parents": [],
+    "siblings": [],
+    "spouses": [
+      {
+        "id": "John Smith",
+        "type": "married"
+      }
+    ],
+    "children": [
+      {
+        "id": "Michael Smith",
+        "type": "blood"
+      },
+      {
+        "id": "Emma Smith",
+        "type": "blood"
+      }
+    ]
+  },
+  {
+    "id": "Michael Smith",
+    "gender": "male",
+    "nodeType": "person",
+    "netWorth": 800000,
+    "parents": [
+      {
+        "id": "John Smith",
+        "type": "blood"
+      },
+      {
+        "id": "Sarah Smith",
+        "type": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "Emma Smith",
+        "type": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": []
+  },
+  {
+    "id": "Emma Smith",
+    "gender": "female",
+    "nodeType": "person",
+    "netWorth": 950000,
+    "parents": [
+      {
+        "id": "John Smith",
+        "type": "blood"
+      },
+      {
+        "id": "Sarah Smith",
+        "type": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "Michael Smith",
+        "type": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": []
+  },
+  {
+    "id": "Jane Doe",
+    "gender": "female",
+    "nodeType": "person",
+    "netWorth": 1500000,
+    "parents": [],
+    "siblings": [],
+    "spouses": [],
+    "children": [
+      {
+        "id": "Bob Doe",
+        "type": "blood"
+      },
+      {
+        "id": "Alice Doe",
+        "type": "blood"
+      }
+    ]
+  },
+  {
+    "id": "Bob Doe",
+    "gender": "male",
+    "nodeType": "person",
+    "netWorth": 500000,
+    "parents": [
+      {
+        "id": "Jane Doe",
+        "type": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "Alice Doe",
+        "type": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": []
+  },
+  {
+    "id": "Alice Doe",
+    "gender": "female",
+    "nodeType": "person",
+    "netWorth": 750000,
+    "parents": [
+      {
+        "id": "Jane Doe",
+        "type": "blood"
+      }
+    ],
+    "siblings": [
+      {
+        "id": "Bob Doe",
+        "type": "blood"
+      }
+    ],
+    "spouses": [],
+    "children": []
+  }
+]

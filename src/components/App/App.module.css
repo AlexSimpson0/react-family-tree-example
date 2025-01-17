@@ -1,18 +1,9 @@
 .root {
   display: flex;
   flex-direction: column;
-  background: #eee;
+  background: #F5F5F5;
   height: 100%;
-}
-
-.header {
-  display: flex;
-  padding: 10px 20px;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-  z-index: 999;
+  color: #333;
 }
 
 .title {
@@ -20,56 +11,132 @@
   margin: 0;
   padding: 0;
   align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  font-weight: 500;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #2196F3;
 }
 
 .version {
   display: block;
-  padding: 4px 6px;
-  font-size: 10px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
   line-height: 1;
-  background: #eee;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  color: #666;
+  background: #F5F5F5;
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
 }
 
 .wrapper {
-  flex: 1;
+  background-color: white;
+  background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 20px 20px;  /* Controls the spacing of dots */
+  background-position: -19px -19px;  /* Slight offset */
+  min-height: 100vh;
+  padding: 40px;
 }
 
 .tree {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 40px;
+  margin: 20px;
+  min-width: 1500px; /* Keep minimum width to fit the tree */
+  min-height: 700px; /* Keep minimum height to fit the tree */
+  position: relative;
+  display: inline-block;
+  /* Removed:
+  - background: #FFFFFF
+  - border: 1px solid #E2E8F0
+  - border-radius: 16px
+  - box-shadow
+  */
 }
 
 .reset {
   position: absolute;
-  right: 10px;
-  top: 60px;
-  padding: 4px 10px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  line-height: 1;
+  right: 20px;
+  top: 80px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #666;
+  background: #FFF;
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reset:hover {
+  background: #F5F5F5;
+  border-color: #CCC;
 }
 
 .details {
   position: absolute;
-  left: 10px;
-  top: 60px;
+  right: 20px;
+  top: 20px;
+  min-width: 200px;
+  background: #FFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
   }
 
   .details {
-    top: 100px;
+    top: 120px;
   }
+}
+
+/* Horizontal lines (those with height: 1px) */
+.tree [style*="height: 1px"][style*="background:"] {
+  background: none !important;
+  border-bottom: 2px dashed #d1d5db !important;  /* Changed from #e5e7eb to #9ca3af */
+  height: 0 !important;
+}
+
+/* Vertical lines (those with width: 1px) */
+.tree [style*="width: 1px"][style*="background:"] {
+  background: none !important;
+  border-right: 2px dashed #d1d5db !important;  /* Changed from #e5e7eb to #9ca3af */
+  width: 0 !important;
+}
+
+.fileSelect {
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  width: 200px;
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 14px;
+  color: #1a1a1a;
+  cursor: pointer;
+  appearance: none;  /* Remove default arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  transition: all 0.2s ease;
+  z-index: 100;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.fileSelect:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.fileSelect:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
 }

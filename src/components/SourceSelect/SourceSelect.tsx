@@ -19,7 +19,14 @@ export const SourceSelect = memo(
 
         fetch(url)
           .then((resp) => resp.json())
-          .then((data) => Array.isArray(data) && onChange(key, data))
+          .then((data) => {
+            if (Array.isArray(data) && data.every(node => 
+              'id' in node && 
+              ('nodeType' in node || 'gender' in node)
+            )) {
+              onChange(key, data);
+            }
+          })
           .catch(() => {});
       }
       else {
